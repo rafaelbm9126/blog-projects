@@ -1,0 +1,157 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Title from "../components/Title.svelte";
+import Date from "../components/Date.svelte";
+import Image from "../components/Image.svelte";
+import Summary from "../components/Summary.svelte";
+import Note from "../components/Note.svelte";
+import Paragraph from "../components/Paragraph.svelte";
+import SubTitle from "../components/SubTitle.svelte";
+import List from "../components/List.svelte";
+import SubTitleTwo from "../components/SubTitleTwo.svelte";
+import GithubButton from "../components/GithubButton.svelte";
+---
+
+<Layout title="Ziglang, another way to create a binary search tree">
+  <main class="container my-24 mx-auto md:px-48">
+    <section class="mb-32">
+      <Title>Ziglang, another way to create a binary search tree</Title>
+      <Date>23 october 2023</Date>
+      <Image
+        src="https://github.com/ziglang/logo/raw/master/zero.svg"
+        href="https://github.com/ziglang/logo"
+      />
+      <Summary>
+        "Ziglang is a programming language designed for efficiency, safety, and
+        simplicity. With a focus on readability and low-level control, Ziglang
+        empowers developers to create robust, high-performance software while
+        maintaining a clear and elegant codebase."
+      </Summary>
+      <Note>
+        Visit for more information
+        <a class="text-blue-600" target="_blank" href="https://ziglang.org/">
+          ZigLang
+        </a>
+      </Note>
+      <Image
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/1200px-Binary_search_tree.svg.png"
+        href="https://en.wikipedia.org/wiki/Binary_search_tree"
+      />
+      <Paragraph>
+        A binary search tree (BST) is a hierarchical data structure in which
+        each node has, at most, two children: a left child and a right child.
+        Values in the nodes are organized in a way that smaller values are in
+        the left subtree, and larger values are in the right subtree. This
+        enables efficient data retrieval and search since a "divide and conquer"
+        approach can be applied to locate specific elements. Binary search trees
+        are commonly used in applications where quick access to ordered data is
+        required.
+      </Paragraph>
+      <Note>
+        Visit the official documentation
+        <a
+          class="text-blue-600"
+          target="_blank"
+          href="https://ziglang.org/documentation/master">ZigLang Doc</a
+        >
+      </Note>
+      <SubTitle>We create a data structure</SubTitle>
+      <script
+        is:inline
+        src="https://gist.github.com/rafaelbm9126/a12005428637f4830d9453c9bba3d11e.js"
+      ></script>
+      <Paragraph>
+        The structure (struct) is used to define the data model that the binary
+        tree will follow. It includes the following attributes:
+      </Paragraph>
+      <List
+        list={[
+          `data: This represents the value associated with each node and is used
+    			for ordering.`,
+          `left: This pointer guides the branches, sub-branches, and nodes on the
+    			left side.`,
+          `right: This pointer guides the branches, sub-branches, and nodes on
+    			the right side.`,
+        ]}
+      />
+      <SubTitle>ArenaAllocator?</SubTitle>
+      <Paragraph>
+        In Ziglang, the ArenaAllocator function is used to allocate and manage
+        memory efficiently. This function creates a contiguous "arena" of
+        memory, meaning it allocates memory blocks sequentially. The advantage
+        of using an ArenaAllocator lies in its efficiency and simplicity, as it
+        doesn't suffer from memory fragmentation, simplifies memory management,
+        and allows for efficient deallocation of all allocated memory at once.
+      </Paragraph>
+      <script
+        is:inline
+        src="https://gist.github.com/rafaelbm9126/a12005428637f4830d9453c9bba3d11e.js"
+      ></script>
+      <Paragraph>
+        In summary, ArenaAllocator in Ziglang is a tool that facilitates orderly
+        and efficient memory allocation and management, which can be especially
+        useful in situations where precise memory control is needed and
+        fragmentation issues are to be avoided.
+      </Paragraph>
+      <SubTitle>Insert Node</SubTitle>
+      <script
+        is:inline
+        src="https://gist.github.com/rafaelbm9126/016289d054208e31205423441ac7d01b.js"
+      ></script>
+      <Paragraph>
+        The rule applied for sorting is as follows: If the node is null, we
+        store the first value as the root. In the case that it is not null, we
+        evaluate the following: if it is smaller than the previous value, we
+        place it in the left branch, and if it is greater, we place it in the
+        right branch. This process is repeated every time a new value is
+      </Paragraph>
+      <SubTitle>Types of traversals</SubTitle>
+      <SubTitleTwo>Pre-Order</SubTitleTwo>
+      <Paragraph>
+        The pre-order traversal in a binary tree is an exploration technique
+        that starts by visiting the root node, then moves to the left subtree,
+        and finally to the right subtree. This process is repeated recursively
+        for each node in the tree.
+      </Paragraph>
+      <script
+        is:inline
+        src="https://gist.github.com/rafaelbm9126/874bacf11611b8560e6d1070b59abbe9.js"
+      ></script>
+      <SubTitleTwo>In-Order</SubTitleTwo>
+      <Paragraph>
+        In-order traversal in a binary tree is an exploration method that begins
+        by visiting the left subtree, then the root node, and finally the right
+        subtree recursively. This process is repeated for each node in the tree.
+      </Paragraph>
+      <script
+        is:inline
+        src="https://gist.github.com/rafaelbm9126/e30f0afd9a7291d1dafa7b2af35eec01.js"
+      ></script>
+      <SubTitleTwo>Post-Order</SubTitleTwo>
+      <Paragraph>
+        Post-order traversal in a binary tree is an exploration method that
+        starts by visiting the left subtree, then the right subtree, and finally
+        the root node recursively. This process is repeated for each node in the
+        tree.
+      </Paragraph>
+      <script
+        is:inline
+        src="https://gist.github.com/rafaelbm9126/1c6889b148bde9813871ca737d311065.js"
+      ></script>
+      <SubTitle>Here is where the execution begins</SubTitle>
+      <script
+        is:inline
+        src="https://gist.github.com/rafaelbm9126/be6ee10c42ea3aa55abe965623e8bafb.js"
+      ></script>
+      <Note>
+        <strong>Note:</strong>
+         In the repository, there are two functions, maxDepth and isBalanced,
+        that I have not included since this tutorial is meant to provide a basic
+        idea of how to work with a binary search tree.
+      </Note>
+      <GithubButton />
+    </section>
+  </main>
+</Layout>
+
+<style></style>
