@@ -23,6 +23,7 @@
       <button
         type="button"
         class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-500 focus:outline-none"
+        aria-label="Open Mobile Menu"
         on:click={() => updateMenu(true)}
       >
         <svg

@@ -1,12 +1,14 @@
-<script lang="ts"></script>
+<script lang="ts">
+</script>
 
 <footer class="flex justify-around pt-5 h-16 w-full bg-slate-800">
   <div class="hidden lg:block" />
   <div class="text-white italic text-sm">&copy; 2023 BlogProject</div>
   <div class="flex justify-between w-20">
     <a
-      href="https://github.com/rafaelbm9126"
       class="text-neutral-800 dark:text-neutral-200"
+      href="https://github.com/rafaelbm9126"
+      aria-label="GitHub Repository Editor"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -20,8 +22,9 @@
       </svg>
     </a>
     <a
-      href="/"
       class=" text-neutral-800 dark:text-neutral-200"
+      href="/"
+      aria-label="Linkedin Editor"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

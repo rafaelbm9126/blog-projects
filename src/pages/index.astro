@@ -13,6 +13,7 @@ import GithubButton from "../components/GithubButton.svelte";
 import Footer from "../components/Footer.svelte";
 import Header from "../components/Header.svelte";
 import ResponsiveMenu from "../components/ResponsiveMenu.svelte";
+import Link from "../components/Link.svelte";
 ---
 
 <Layout title="Ziglang, another way to create a binary search tree">
@@ -22,10 +23,7 @@ import ResponsiveMenu from "../components/ResponsiveMenu.svelte";
     <section class="mx-auto max-w-7xl px-8">
       <Title>Ziglang, another way to create a binary search tree</Title>
       <Date>23 october 2023</Date>
-      <Image
-        src="zero.svg"
-        href="https://github.com/ziglang/logo"
-      />
+      <Image src="zero.svg" href="https://github.com/ziglang/logo" />
       <Summary>
         "Ziglang is a programming language designed for efficiency, safety, and
         simplicity. With a focus on readability and low-level control, Ziglang
@@ -34,9 +32,10 @@ import ResponsiveMenu from "../components/ResponsiveMenu.svelte";
       </Summary>
       <Note>
         Visit for more information
-        <a class="text-blue-600" target="_blank" href="https://ziglang.org/">
-          ZigLang
-        </a>
+        <Link
+          href="https://ziglang.org/"
+          arialabel="Ziglang page"
+        >ZigLang</Link>
       </Note>
       <Image
         src="bst.png"
@@ -55,11 +54,10 @@ import ResponsiveMenu from "../components/ResponsiveMenu.svelte";
       </Paragraph>
       <Note>
         Visit the official documentation
-        <a
-          class="text-blue-600"
-          target="_blank"
-          href="https://ziglang.org/documentation/master">ZigLang Doc</a
-        >
+        <Link
+          href="https://ziglang.org/documentation/master"
+          arialabel="Ziglang documentation page"
+        >ZigLang Doc</Link>
       </Note>
       <SubTitle>We create a data structure</SubTitle>
       <script

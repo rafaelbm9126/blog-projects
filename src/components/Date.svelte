@@ -13,7 +13,7 @@
       />
     </svg>
   </div>
-  <span class="text-xs text-gray-600 italic uppercase">
+  <span class="text-xs text-gray-400 italic uppercase">
     <slot />
   </span>
 </div>
