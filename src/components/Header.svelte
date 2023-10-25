@@ -11,11 +11,11 @@
     class="ml-auto mr-auto flex h-full w-full max-w-7xl items-center justify-between p-6 lg:pl-8 lg:pr-8"
   >
     <div class="flex flex-1">
-      <a href="/" class="-m-1.5 p-1.5">
+      <a href="/" title="Home" class="-m-1.5 p-1.5">
         <img
           class="h-8 w-auto"
           src="https://tailwindui.com/img/logos/mark.svg?color=indigo&amp;shade=500"
-          alt=""
+          alt="Home"
         />
       </a>
     </div>
@@ -43,15 +43,11 @@
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
-      <a href="/" class="text-sm font-semibold leading-5 text-white">Product</a>
-      <a href="/" class="text-sm font-semibold leading-5 text-white">Features</a
-      >
-      <a href="/" class="text-sm font-semibold leading-5 text-white"
-        >Marketplace</a
-      >
-      <a href="/" class="text-sm font-semibold leading-5 text-white">Company</a>
+      <a href="/" class="text-sm font-semibold leading-5 text-white">Ziglang</a>
+      <a href="/" class="text-sm font-semibold leading-5 text-white">C++</a>
+      <a href="/" class="text-sm font-semibold leading-5 text-white">Rust</a>
+      <a href="/" class="text-sm font-semibold leading-5 text-white">Typescript</a>
     </div>
-    <div class="hidden flex-1 lg:flex lg:justify-end" />
   </nav>
 </header>
 

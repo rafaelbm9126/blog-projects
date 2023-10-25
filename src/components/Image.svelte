@@ -1,18 +1,25 @@
 <script lang="ts">
   export let src = "";
-  export let href = "";
+  export let href: string | undefined = undefined;
   export let background = false;
 </script>
 
 <figure
-  class={`flex flex-col w-full h-96 mb-12 rounded ${
+  class={`group relative flex flex-col w-full h-96 mb-12 rounded ${
     background ? "bg-white opacity-60" : ""
   }`}
 >
   <img {src} class="h-96 w-auto object-contain" alt="" />
-  <figcaption class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">
-    <a class="text-blue-600" {href} target="_blank">origin</a>
-  </figcaption>
+  {#if href !== undefined}
+    <div
+      class="hidden group-hover:block absolute w-full top-0 right-0 p-2 text-gray-500 text-sm bg-gray-700 rounded-t-sm opacity-70 italic text-right"
+    >
+      <span class="text-xl"> &heartsuit; </span>
+      <a class="underline" {href} target="_blank">
+        {href}
+      </a>
+    </div>
+  {/if}
 </figure>
 
 <style></style>
