@@ -9,7 +9,7 @@
     background ? "bg-white opacity-60" : ""
   }`}
 >
-  <img {src} class="h-96 w-auto object-contain" alt="" />
+  <img {src} class="h-96 w-96 object-contain" alt="Article" />
   {#if href !== undefined}
     <div
       class="hidden group-hover:block absolute w-full top-0 right-0 p-2 text-gray-500 text-sm bg-gray-700 rounded-t-sm opacity-70 italic text-right"

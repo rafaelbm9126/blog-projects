@@ -13,8 +13,8 @@
     <div class="flex flex-1">
       <a href="/" title="Home" class="-m-1.5 p-1.5">
         <img
-          class="h-8 w-auto"
-          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&amp;shade=500"
+          class="h-12 w-12"
+          src="logo.svg"
           alt="Home"
         />
       </a>
