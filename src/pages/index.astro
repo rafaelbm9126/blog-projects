@@ -10,9 +10,12 @@ import SubTitle from "../components/SubTitle.svelte";
 import List from "../components/List.svelte";
 import SubTitleTwo from "../components/SubTitleTwo.svelte";
 import GithubButton from "../components/GithubButton.svelte";
+import Footer from "../components/Footer.svelte";
+import Header from "../components/Header.svelte";
 ---
 
 <Layout title="Ziglang, another way to create a binary search tree">
+  <Header />
   <main class="container my-24 mx-auto md:px-48">
     <section class="mb-32">
       <Title>Ziglang, another way to create a binary search tree</Title>
@@ -152,6 +155,7 @@ import GithubButton from "../components/GithubButton.svelte";
       <GithubButton />
     </section>
   </main>
+  <Footer />
 </Layout>
 
 <style></style>
