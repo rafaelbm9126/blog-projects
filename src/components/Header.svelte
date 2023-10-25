@@ -1,89 +1,57 @@
-<script lang="ts"></script>
+<script lang="ts" type="module">
+  import { openResponsiveMenu } from "../store/index";
 
-<header>
-  <!-- Navigation bar -->
+  function updateMenu(show: boolean) {
+    openResponsiveMenu.set(show);
+  }
+</script>
+
+<header class="h-16 w-full bg-slate-800">
   <nav
-    class="relative flex w-full items-center justify-between bg-white py-2 text-neutral-600 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-slate-900 dark:text-neutral-200 md:flex-wrap md:justify-start"
-    data-te-navbar-ref
+    class="ml-auto mr-auto flex h-full w-full max-w-7xl items-center justify-between p-6 lg:pl-8 lg:pr-8"
   >
-    <div class="flex w-full flex-wrap items-center justify-between px-3">
-      <div class="flex items-center">
-        <!-- Hamburger menu button -->
-        <button
-          class="border-0 bg-transparent px-2 text-xl leading-none transition-shadow duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 dark:hover:text-white dark:focus:text-white lg:hidden"
-          type="button"
-          data-te-collapse-init
-          data-te-target="#navbarSupportedContentX"
-          aria-controls="navbarSupportedContentX"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <!-- Hamburger menu icon -->
-          <span class="[&>svg]:w-5">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="h-7 w-7"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </span>
-        </button>
-      </div>
-
-      <!-- Navigation links -->
-      <div
-        class="!visible hidden grow basis-[100%] items-center lg:!flex lg:basis-auto"
-        id="navbarSupportedContentX"
-        data-te-collapse-item
-      >
-        <ul class="mr-auto flex flex-col lg:flex-row" data-te-navbar-nav-ref>
-          <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-            <a
-              class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
-              href="#!"
-              data-te-nav-link-ref
-              data-te-ripple-init
-              data-te-ripple-color="light">Home</a
-            >
-          </li>
-          <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-            <a
-              class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
-              href="#!"
-              data-te-nav-link-ref
-              data-te-ripple-init
-              data-te-ripple-color="light">Features</a
-            >
-          </li>
-          <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-            <a
-              class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
-              href="#!"
-              data-te-nav-link-ref
-              data-te-ripple-init
-              data-te-ripple-color="light">Pricing</a
-            >
-          </li>
-          <li class="mb-2 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
-            <a
-              class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
-              href="#!"
-              data-te-nav-link-ref
-              data-te-ripple-init
-              data-te-ripple-color="light">About</a
-            >
-          </li>
-        </ul>
-      </div>
+    <div class="flex flex-1">
+      <a href="/" class="-m-1.5 p-1.5">
+        <img
+          class="h-8 w-auto"
+          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&amp;shade=500"
+          alt=""
+        />
+      </a>
     </div>
+    <div class="flex lg:hidden">
+      <button
+        type="button"
+        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-500 focus:outline-none"
+        on:click={() => updateMenu(true)}
+      >
+        <svg
+          class="h-6 w-6"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-12">
+      <a href="/" class="text-sm font-semibold leading-5 text-white">Product</a>
+      <a href="/" class="text-sm font-semibold leading-5 text-white">Features</a
+      >
+      <a href="/" class="text-sm font-semibold leading-5 text-white"
+        >Marketplace</a
+      >
+      <a href="/" class="text-sm font-semibold leading-5 text-white">Company</a>
+    </div>
+    <div class="hidden flex-1 lg:flex lg:justify-end" />
   </nav>
 </header>
 

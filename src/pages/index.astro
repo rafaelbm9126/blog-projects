@@ -12,10 +12,12 @@ import SubTitleTwo from "../components/SubTitleTwo.svelte";
 import GithubButton from "../components/GithubButton.svelte";
 import Footer from "../components/Footer.svelte";
 import Header from "../components/Header.svelte";
+import ResponsiveMenu from "../components/ResponsiveMenu.svelte";
 ---
 
 <Layout title="Ziglang, another way to create a binary search tree">
-  <Header />
+  <ResponsiveMenu client:load />
+  <Header client:load />
   <main class="container my-24 mx-auto md:px-48">
     <section class="mb-32">
       <Title>Ziglang, another way to create a binary search tree</Title>
@@ -39,6 +41,7 @@ import Header from "../components/Header.svelte";
       <Image
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/1200px-Binary_search_tree.svg.png"
         href="https://en.wikipedia.org/wiki/Binary_search_tree"
+        background
       />
       <Paragraph>
         A binary search tree (BST) is a hierarchical data structure in which
