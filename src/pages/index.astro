@@ -19,7 +19,11 @@ import Code from "../components/Code.svelte";
 import data from "../data/art1";
 ---
 
-<Layout title={data.title}>
+<Layout
+  title={data.title}
+  description={data.description}
+  keywords={data.keywords}
+>
   <ResponsiveMenu client:load />
   <Header client:load />
   <main class="container w-full max-w-full my-20">
@@ -164,10 +168,7 @@ import data from "../data/art1";
         that I have not included since this tutorial is meant to provide a basic
         idea of how to work with a binary search tree.
       </Note>
-      <GithubButton
-        url="https://api.github.com/repos/rafaelbm9126/binary-search-tree"
-        client:load
-      />
+      <GithubButton url={data.api_url} repo={data.repo_url} client:load />
     </section>
   </main>
   <Footer />

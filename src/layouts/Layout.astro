@@ -4,19 +4,23 @@ import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
 interface Props {
   title: string;
+  description: string;
+  keywords: string[];
 }
-const { title } = Astro.props;
+const { title, description, keywords } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="dark bg-slate-950">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords.join(", ")} />
     <meta http-equiv="Cache-control" content="no-cache" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/ico.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
     <title>{title}</title>
   </head>
   <body>

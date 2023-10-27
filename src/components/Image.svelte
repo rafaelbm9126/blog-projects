@@ -12,11 +12,11 @@
   <img {src} class="h-96 w-96 object-contain" alt="Article" />
   {#if href !== undefined}
     <div
-      class="hidden group-hover:block absolute w-full top-0 right-0 p-2 text-gray-500 text-sm bg-gray-700 rounded-t-sm opacity-70 italic text-right"
+      class="hidden group-hover:block absolute w-full top-0 right-0 p-2 text-gray-300 text-sm bg-gray-700 rounded-t-sm opacity-70 italic text-right"
     >
       <a class="underline" {href} target="_blank">
         Image source
-        <span class="text-sm"> &heartsuit; </span>
+        <span class="text-sm text-red-500"> &heartsuit; </span>
       </a>
     </div>
   {/if}

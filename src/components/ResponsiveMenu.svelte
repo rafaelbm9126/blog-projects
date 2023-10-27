@@ -16,7 +16,7 @@
       tabindex={0}
     />
     <div
-      class="menu-responsive-shadow fixed bottom-0 right-0 top-0 z-10 w-full max-w-sm overflow-y-auto bg-slate-800 p-6 pt-5"
+      class="menu-responsive-shadow fixed bottom-0 right-0 top-0 z-20 w-60 min-w-max max-w-sm overflow-y-auto bg-slate-800 p-6 pt-5"
     >
       <div class="flex items-center justify-between">
         <a href="/" class="-m-1.5 p-1.5">

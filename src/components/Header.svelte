@@ -6,7 +6,7 @@
   }
 </script>
 
-<header class="h-16 w-full bg-slate-800">
+<header class="sticky top-0 h-16 w-full bg-slate-800 z-10">
   <nav
     class="ml-auto mr-auto flex h-full w-full max-w-7xl items-center justify-between p-6 lg:pl-8 lg:pr-8"
   >
