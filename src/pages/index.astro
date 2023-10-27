@@ -16,16 +16,16 @@ import ResponsiveMenu from "../components/ResponsiveMenu.svelte";
 import Link from "../components/Link.svelte";
 import Code from "../components/Code.svelte";
 
-import DataArt1 from "../data/art1";
+import data from "../data/art1";
 ---
 
-<Layout title="Ziglang, another way to create a binary search tree">
+<Layout title={data.title}>
   <ResponsiveMenu client:load />
   <Header client:load />
   <main class="container w-full max-w-full my-20">
     <section class="mx-auto max-w-7xl px-8">
-      <Title>Ziglang, another way to create a binary search tree</Title>
-      <Date>23 october 2023</Date>
+      <Title>{data.title}</Title>
+      <Date>{data.date}</Date>
       <Image src="zero.svg" href="https://github.com/ziglang/logo" />
       <Summary>
         "Ziglang is a programming language designed for efficiency, safety, and
@@ -65,8 +65,8 @@ import DataArt1 from "../data/art1";
       </Note>
       <SubTitle>We create a data structure</SubTitle>
       <Code
-        language={DataArt1.code[0].language}
-        code={DataArt1.code[0].text}
+        language={data.code[0].language}
+        code={data.code[0].text}
         client:only
       />
       <Paragraph>
@@ -93,8 +93,8 @@ import DataArt1 from "../data/art1";
         and allows for efficient deallocation of all allocated memory at once.
       </Paragraph>
       <Code
-        language={DataArt1.code[1].language}
-        code={DataArt1.code[1].text}
+        language={data.code[1].language}
+        code={data.code[1].text}
         client:only
       />
       <Paragraph>
@@ -105,8 +105,8 @@ import DataArt1 from "../data/art1";
       </Paragraph>
       <SubTitle>Insert Node</SubTitle>
       <Code
-        language={DataArt1.code[2].language}
-        code={DataArt1.code[2].text}
+        language={data.code[2].language}
+        code={data.code[2].text}
         client:only
       />
       <Paragraph>
@@ -125,8 +125,8 @@ import DataArt1 from "../data/art1";
         for each node in the tree.
       </Paragraph>
       <Code
-        language={DataArt1.code[3].language}
-        code={DataArt1.code[3].text}
+        language={data.code[3].language}
+        code={data.code[3].text}
         client:only
       />
       <SubTitleTwo>In-Order</SubTitleTwo>
@@ -136,8 +136,8 @@ import DataArt1 from "../data/art1";
         subtree recursively. This process is repeated for each node in the tree.
       </Paragraph>
       <Code
-        language={DataArt1.code[4].language}
-        code={DataArt1.code[4].text}
+        language={data.code[4].language}
+        code={data.code[4].text}
         client:only
       />
       <SubTitleTwo>Post-Order</SubTitleTwo>
@@ -148,14 +148,14 @@ import DataArt1 from "../data/art1";
         tree.
       </Paragraph>
       <Code
-        language={DataArt1.code[5].language}
-        code={DataArt1.code[5].text}
+        language={data.code[5].language}
+        code={data.code[5].text}
         client:only
       />
       <SubTitle>Here is where the execution begins</SubTitle>
       <Code
-        language={DataArt1.code[6].language}
-        code={DataArt1.code[6].text}
+        language={data.code[6].language}
+        code={data.code[6].text}
         client:only
       />
       <Note>
@@ -164,7 +164,10 @@ import DataArt1 from "../data/art1";
         that I have not included since this tutorial is meant to provide a basic
         idea of how to work with a binary search tree.
       </Note>
-      <GithubButton />
+      <GithubButton
+        url="https://api.github.com/repos/rafaelbm9126/binary-search-tree"
+        client:load
+      />
     </section>
   </main>
   <Footer />

@@ -1,7 +1,9 @@
 export default {
+  title: "Ziglang, another way to create a binary search tree",
+  date: "23 october 2023",
   code: [
     {
-      language: 'zig',
+      language: "zig",
       text: `
         const Node = struct {
           data: usize,
@@ -11,7 +13,7 @@ export default {
       `,
     },
     {
-      language: 'zig',
+      language: "zig",
       text: `
         var arena = std.heap.ArenaAllocator.init(std.heap.page_allocator);
         defer arena.deinit();
@@ -19,7 +21,7 @@ export default {
       `,
     },
     {
-      language: 'zig',
+      language: "zig",
       text: `
         fn insertNode(allocator: Allocator, node: *?*Node, data: usize) !void {
             const tmp: *Node = try allocator.create(Node);
@@ -43,7 +45,7 @@ export default {
       `,
     },
     {
-      language: 'zig',
+      language: "zig",
       text: `
         fn PrintPreOrder(node: ?*Node) void {
             if (node != null) {
@@ -55,7 +57,7 @@ export default {
       `,
     },
     {
-      language: 'zig',
+      language: "zig",
       text: `
         fn PrintInOrder(node: ?*Node) void {
             if (node != null) {
@@ -67,7 +69,7 @@ export default {
       `,
     },
     {
-      language: 'zig',
+      language: "zig",
       text: `
         fn PrintPostOrder(node: ?*Node) void {
             if (node != null) {
@@ -79,7 +81,7 @@ export default {
       `,
     },
     {
-      language: 'zig',
+      language: "zig",
       text: `
         pub fn main() !void {
             // ******* //
