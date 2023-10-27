@@ -1,9 +1,9 @@
 <script lang="ts"></script>
 
-<h3 class="mb-6">
+<h2 class="mb-6">
   <strong class="text-xl text-white">
     <slot />
   </strong>
-</h3>
+</h2>
 
 <style></style>
