@@ -14,9 +14,9 @@
     <div
       class="hidden group-hover:block absolute w-full top-0 right-0 p-2 text-gray-500 text-sm bg-gray-700 rounded-t-sm opacity-70 italic text-right"
     >
-      <span class="text-xl"> &heartsuit; </span>
       <a class="underline" {href} target="_blank">
-        {href}
+        Image source
+        <span class="text-sm"> &heartsuit; </span>
       </a>
     </div>
   {/if}
