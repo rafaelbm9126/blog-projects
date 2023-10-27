@@ -5,6 +5,7 @@ export default {
   date: "23 october 2023",
   api_url: "https://api.github.com/repos/rafaelbm9126/binary-search-tree",
   repo_url: "//github.com/rafaelbm9126/binary-search-tree",
+  tags: ["zig", "ziglang", "compiler", "code", "examples"],
   code: [
     {
       language: "zig",

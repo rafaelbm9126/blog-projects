@@ -11,7 +11,7 @@ const { title, description, keywords } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="dark bg-slate-950">
+<html lang="en" class="dark bg-slate-950 font-sans">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -35,5 +35,22 @@ const { title, description, keywords } = Astro.props;
   pre[class*="language-"].line-numbers {
     padding-left: 3em;
     border-radius: 6px;
+  }
+  .scroll-style-spetial {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary) var(--primary);
+  }
+  .scroll-style-spetial::-webkit-scrollbar {
+    width: 15px;
+  }
+  .scroll-style-spetial::-webkit-scrollbar-track {
+    background: var(--primary);
+  }
+  .scroll-style-spetial::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+  }
+  button {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
   }
 </style>
