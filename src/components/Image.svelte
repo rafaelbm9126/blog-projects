@@ -5,7 +5,7 @@
 </script>
 
 <figure
-  class={`group relative flex flex-col w-full h-96 mb-12 rounded ${
+  class={`group relative flex flex-col justify-center items-center w-full h-96 mb-12 rounded ${
     background ? "bg-white opacity-60" : ""
   }`}
 >

@@ -1,25 +1,36 @@
 ---
+import "prismjs/themes/prism-tomorrow.css";
+import "prismjs/plugins/line-numbers/prism-line-numbers.css";
+
 interface Props {
-	title: string;
+  title: string;
 }
 const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="dark bg-slate-950">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta http-equiv="Cache-control" content="no-cache" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/ico.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-		<script async defer src="https://buttons.github.io/buttons.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/ico.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
 </html>
 
-<style is:global></style>
+<style is:global>
+  .line-numbers .line-numbers-rows {
+    width: 3em;
+  }
+  pre[class*="language-"].line-numbers {
+    padding-left: 3em;
+    border-radius: 6px;
+  }
+</style>

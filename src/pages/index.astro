@@ -14,6 +14,9 @@ import Footer from "../components/Footer.svelte";
 import Header from "../components/Header.svelte";
 import ResponsiveMenu from "../components/ResponsiveMenu.svelte";
 import Link from "../components/Link.svelte";
+import Code from "../components/Code.svelte";
+
+import DataArt1 from "../data/art1";
 ---
 
 <Layout title="Ziglang, another way to create a binary search tree">
@@ -32,10 +35,9 @@ import Link from "../components/Link.svelte";
       </Summary>
       <Note>
         Visit for more information
-        <Link
-          href="https://ziglang.org/"
-          arialabel="Ziglang page"
-        >ZigLang</Link>
+        <Link href="https://ziglang.org/" arialabel="Ziglang page">
+          ZigLang
+        </Link>
       </Note>
       <Image
         src="bst.png"
@@ -57,13 +59,16 @@ import Link from "../components/Link.svelte";
         <Link
           href="https://ziglang.org/documentation/master"
           arialabel="Ziglang documentation page"
-        >ZigLang Doc</Link>
+        >
+          ZigLang Doc
+        </Link>
       </Note>
       <SubTitle>We create a data structure</SubTitle>
-      <script
-        is:inline
-        src="https://gist.github.com/rafaelbm9126/a12005428637f4830d9453c9bba3d11e.js"
-      ></script>
+      <Code
+        language={DataArt1.code[0].language}
+        code={DataArt1.code[0].text}
+        client:only
+      />
       <Paragraph>
         The structure (struct) is used to define the data model that the binary
         tree will follow. It includes the following attributes:
@@ -87,10 +92,11 @@ import Link from "../components/Link.svelte";
         doesn't suffer from memory fragmentation, simplifies memory management,
         and allows for efficient deallocation of all allocated memory at once.
       </Paragraph>
-      <script
-        is:inline
-        src="https://gist.github.com/rafaelbm9126/a12005428637f4830d9453c9bba3d11e.js"
-      ></script>
+      <Code
+        language={DataArt1.code[1].language}
+        code={DataArt1.code[1].text}
+        client:only
+      />
       <Paragraph>
         In summary, ArenaAllocator in Ziglang is a tool that facilitates orderly
         and efficient memory allocation and management, which can be especially
@@ -98,10 +104,11 @@ import Link from "../components/Link.svelte";
         fragmentation issues are to be avoided.
       </Paragraph>
       <SubTitle>Insert Node</SubTitle>
-      <script
-        is:inline
-        src="https://gist.github.com/rafaelbm9126/016289d054208e31205423441ac7d01b.js"
-      ></script>
+      <Code
+        language={DataArt1.code[2].language}
+        code={DataArt1.code[2].text}
+        client:only
+      />
       <Paragraph>
         The rule applied for sorting is as follows: If the node is null, we
         store the first value as the root. In the case that it is not null, we
@@ -117,20 +124,22 @@ import Link from "../components/Link.svelte";
         and finally to the right subtree. This process is repeated recursively
         for each node in the tree.
       </Paragraph>
-      <script
-        is:inline
-        src="https://gist.github.com/rafaelbm9126/874bacf11611b8560e6d1070b59abbe9.js"
-      ></script>
+      <Code
+        language={DataArt1.code[3].language}
+        code={DataArt1.code[3].text}
+        client:only
+      />
       <SubTitleTwo>In-Order</SubTitleTwo>
       <Paragraph>
         In-order traversal in a binary tree is an exploration method that begins
         by visiting the left subtree, then the root node, and finally the right
         subtree recursively. This process is repeated for each node in the tree.
       </Paragraph>
-      <script
-        is:inline
-        src="https://gist.github.com/rafaelbm9126/e30f0afd9a7291d1dafa7b2af35eec01.js"
-      ></script>
+      <Code
+        language={DataArt1.code[4].language}
+        code={DataArt1.code[4].text}
+        client:only
+      />
       <SubTitleTwo>Post-Order</SubTitleTwo>
       <Paragraph>
         Post-order traversal in a binary tree is an exploration method that
@@ -138,15 +147,17 @@ import Link from "../components/Link.svelte";
         the root node recursively. This process is repeated for each node in the
         tree.
       </Paragraph>
-      <script
-        is:inline
-        src="https://gist.github.com/rafaelbm9126/1c6889b148bde9813871ca737d311065.js"
-      ></script>
+      <Code
+        language={DataArt1.code[5].language}
+        code={DataArt1.code[5].text}
+        client:only
+      />
       <SubTitle>Here is where the execution begins</SubTitle>
-      <script
-        is:inline
-        src="https://gist.github.com/rafaelbm9126/be6ee10c42ea3aa55abe965623e8bafb.js"
-      ></script>
+      <Code
+        language={DataArt1.code[6].language}
+        code={DataArt1.code[6].text}
+        client:only
+      />
       <Note>
         <strong>Note:</strong>
          In the repository, there are two functions, maxDepth and isBalanced,
