@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<footer class="flex justify-around pt-5 h-16 w-full bg-slate-800">
+<footer class="flex justify-around pt-5 h-16 w-full bg-slate-800 mt-auto">
   <div class="hidden lg:block" />
   <div class="text-white italic text-sm">&copy; 2023 BlogProject</div>
   <div class="flex justify-between w-20">

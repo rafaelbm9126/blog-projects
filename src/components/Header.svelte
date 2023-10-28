@@ -1,5 +1,6 @@
 <script lang="ts" type="module">
-  import { openResponsiveMenu } from "../store/index";
+  import { openResponsiveMenu } from "@store/index";
+  import MenuConfig from "@data/menu.conf";
 
   function updateMenu(show: boolean) {
     openResponsiveMenu.set(show);
@@ -14,7 +15,7 @@
       <a href="/" title="Home" class="-m-1.5 p-1.5">
         <img
           class="h-12 w-12"
-          src="logo.svg"
+          src="/logo.svg"
           alt="Home"
         />
       </a>
@@ -44,10 +45,13 @@
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
-      <a href="/" class="text-sm font-semibold leading-5 text-white">Ziglang</a>
-      <a href="/" class="text-sm font-semibold leading-5 text-white">C++</a>
-      <a href="/" class="text-sm font-semibold leading-5 text-white">Rust</a>
-      <a href="/" class="text-sm font-semibold leading-5 text-white">Typescript</a>
+      {#each MenuConfig.items as conf}
+        {#if conf.visible}
+          <a href={conf.href} class="text-sm font-semibold leading-5 text-white">
+            {conf.title}
+          </a>
+        {/if}
+      {/each}
     </div>
   </nav>
 </header>

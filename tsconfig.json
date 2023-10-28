@@ -1,4 +1,19 @@
 {
-  "exclude": ["node_modules"],
-  "extends": "astro/tsconfigs/strict"
+  "exclude": ["node_modules", ".vscode", ".tmp", "public"],
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@data/*": ["src/data/*"],
+      "@helpers/*": ["src/helpers/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@pages/*": ["src/pages/*"],
+      "@articles/*": ["src/pages/articles/*"],
+      "@store/*": ["src/store/*"],
+    },
+  },
 }

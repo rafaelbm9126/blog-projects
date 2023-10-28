@@ -1,4 +1,11 @@
-<script lang="ts"></script>
+<script lang="ts">
+  import { format_date } from "@helpers/format_date";
+
+  export let date: string;
+
+  const date_f = format_date(date);
+
+</script>
 
 <div class="mb-6 flex items-center">
   <div class="mr-2">
@@ -14,7 +21,12 @@
     </svg>
   </div>
   <span class="text-xs text-gray-400 italic uppercase">
-    <slot />
+    <dl>
+      <dt class="sr-only">Published on</dt>
+      <dd>
+        <time datetime={date_f.iso}>{date_f.print}</time>
+      </dd>
+    </dl>
   </span>
 </div>
 

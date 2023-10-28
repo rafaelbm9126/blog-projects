@@ -2,55 +2,66 @@
 import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
+import ResponsiveMenu from "@components/ResponsiveMenu.svelte";
+import Header from "@components/Header.svelte";
+import Footer from "@components/Footer.svelte";
+
 interface Props {
-  title: string;
-  description: string;
-  keywords: string[];
+	title: string;
+	description: string;
+	keywords: string[];
 }
 const { title, description, keywords } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" class="dark bg-slate-950 font-sans">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="keywords" content={keywords.join(", ")} />
-    <meta http-equiv="Cache-control" content="no-cache" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
-    <title>{title}</title>
-  </head>
-  <body>
-    <slot />
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords.join(", ")} />
+		<meta http-equiv="Cache-control" content="no-cache" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+		<link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+		<title>{title}</title>
+	</head>
+	<body class="flex min-h-screen flex-col">
+		<ResponsiveMenu client:load />
+		<Header client:load />
+		<main class="container my-20 w-full max-w-full">
+			<section class="mx-auto max-w-7xl px-8">
+				<slot />
+			</section>
+		</main>
+		<Footer />
+	</body>
 </html>
 
 <style is:global>
-  .line-numbers .line-numbers-rows {
-    width: 3em;
-  }
-  pre[class*="language-"].line-numbers {
-    padding-left: 3em;
-    border-radius: 6px;
-  }
-  .scroll-style-spetial {
-    scrollbar-width: thin;
-    scrollbar-color: var(--secondary) var(--primary);
-  }
-  .scroll-style-spetial::-webkit-scrollbar {
-    width: 15px;
-  }
-  .scroll-style-spetial::-webkit-scrollbar-track {
-    background: var(--primary);
-  }
-  .scroll-style-spetial::-webkit-scrollbar-thumb {
-    background-color: var(--secondary);
-  }
-  button {
-    -webkit-tap-highlight-color: transparent;
-    outline: none;
-  }
+	.line-numbers .line-numbers-rows {
+		width: 3em;
+	}
+	pre[class*="language-"].line-numbers {
+		padding-left: 3em;
+		border-radius: 6px;
+	}
+	.scroll-style-spetial {
+		scrollbar-width: thin;
+		scrollbar-color: var(--secondary) var(--primary);
+	}
+	.scroll-style-spetial::-webkit-scrollbar {
+		width: 15px;
+	}
+	.scroll-style-spetial::-webkit-scrollbar-track {
+		background: var(--primary);
+	}
+	.scroll-style-spetial::-webkit-scrollbar-thumb {
+		background-color: var(--secondary);
+	}
+	button {
+		-webkit-tap-highlight-color: transparent;
+		outline: none;
+	}
 </style>

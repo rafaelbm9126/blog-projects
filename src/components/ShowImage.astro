@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+	src: ImageMetadata;
+	href?: string;
+	background?: Boolean;
+}
+const { src, href, background = false } = Astro.props;
+---
+
+<figure
+	class={`group relative flex flex-col justify-center items-center w-full h-96 mb-12 rounded ${
+		background ? "bg-white opacity-60" : ""
+	}`}
+>
+	<Image
+		class="h-96 w-96 object-contain"
+		src={src}
+		alt="Article"
+		width={1500}
+		height={1500}
+	/>
+	{
+		href !== undefined ? (
+			<div class="absolute right-0 top-0 hidden w-full rounded-t-sm bg-gray-700 p-2 text-right text-sm italic text-gray-300 opacity-70 group-hover:block">
+				<a class="underline" {href} target="_blank">
+					Image source
+					<span class="text-sm text-red-500"> &heartsuit; </span>
+				</a>
+			</div>
+		) : null
+	}
+</figure>
+
+<style></style>

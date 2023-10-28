@@ -1,0 +1,46 @@
+---
+import TagList from "@components/TagList.svelte";
+
+import type { Article } from "@data/general";
+
+interface Props {
+	articles: Article[];
+}
+
+const { articles } = Astro.props;
+---
+
+<ul>
+  {
+    articles.map((article) => (
+      <li class="py-5">
+        <article class="flex flex-col space-y-2 xl:space-y-0">
+          <dl>
+            <dt class="sr-only">Published on</dt>
+            <dd class="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+              <time datetime={article.date.iso}>{article.date.print}</time>
+            </dd>
+          </dl>
+          <div class="space-y-3">
+            <div>
+              <h2 class="text-2xl font-bold leading-8 tracking-tight">
+                <a
+                  class="text-gray-900 dark:text-gray-100"
+                  href={`/articles/${article.path}`}
+                >
+                  {article.title}
+                </a>
+              </h2>
+              <TagList tags={article.tags} />
+            </div>
+            <div class="prose max-w-none text-gray-500 dark:text-gray-400">
+              {article.description}
+            </div>
+          </div>
+        </article>
+      </li>
+    ))
+  }
+</ul>
+
+<style></style>

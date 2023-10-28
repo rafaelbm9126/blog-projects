@@ -3,9 +3,10 @@ export default {
 	description:
 		"This article explores the unique features and advantages of Ziglang in the context of binary search trees",
 	keywords: ["zig", "ziglang", "compiler", "programming", "code", "computing", "execute"],
-	date: "23 october 2023",
+	date: "2023-10-23",
 	api_url: "https://api.github.com/repos/rafaelbm9126/binary-search-tree",
 	repo_url: "//github.com/rafaelbm9126/binary-search-tree",
+    path: "zig-simple-binary-search-tree",
 	tags: ["zig", "ziglang", "compiler", "code", "examples"],
 	code: [
 		{
