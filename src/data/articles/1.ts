@@ -1,35 +1,34 @@
 export default {
-	title: "Ziglang, another way to create a binary search tree",
-	description:
-		"This article explores the unique features and advantages of Ziglang in the context of binary search trees",
-	keywords: ["zig", "ziglang", "compiler", "programming", "code", "computing", "execute"],
-	date: "2023-10-23",
-	api_url: "https://api.github.com/repos/rafaelbm9126/binary-search-tree",
-	repo_url: "//github.com/rafaelbm9126/binary-search-tree",
+    title: "Ziglang, another way to create a binary search tree",
+    description:
+        "This article explores the unique features and advantages of Ziglang in the context of binary search trees",
+    keywords: ["zig", "ziglang", "compiler", "programming", "code", "computing", "execute", "linux", "windows", "mac"],
+    date: "2023-10-23",
+    api_url: "https://api.github.com/repos/rafaelbm9126/binary-search-tree",
+    repo_url: "//github.com/rafaelbm9126/binary-search-tree",
     path: "zig-simple-binary-search-tree",
-	tags: ["zig", "ziglang", "compiler", "code", "examples"],
-	code: [
-		{
-			language: "zig",
-			text: `
+    code: [
+        {
+            language: "zig",
+            text: `
         const Node = struct {
           data: usize,
           left: ?*Node,
           right: ?*Node,
         };
       `
-		},
-		{
-			language: "zig",
-			text: `
+        },
+        {
+            language: "zig",
+            text: `
         var arena = std.heap.ArenaAllocator.init(std.heap.page_allocator);
         defer arena.deinit();
         const allocator = arena.allocator();
       `
-		},
-		{
-			language: "zig",
-			text: `
+        },
+        {
+            language: "zig",
+            text: `
         fn insertNode(allocator: Allocator, node: *?*Node, data: usize) !void {
             const tmp: *Node = try allocator.create(Node);
             var new = Node{
@@ -50,10 +49,10 @@ export default {
             }
         }
       `
-		},
-		{
-			language: "zig",
-			text: `
+        },
+        {
+            language: "zig",
+            text: `
         fn PrintPreOrder(node: ?*Node) void {
             if (node != null) {
                 print("PrintPreOrder: {d}", .{node.?.data});
@@ -62,10 +61,10 @@ export default {
             }
         }
       `
-		},
-		{
-			language: "zig",
-			text: `
+        },
+        {
+            language: "zig",
+            text: `
         fn PrintInOrder(node: ?*Node) void {
             if (node != null) {
                 PrintInOrder(node.?.left);
@@ -74,10 +73,10 @@ export default {
             }
         }
       `
-		},
-		{
-			language: "zig",
-			text: `
+        },
+        {
+            language: "zig",
+            text: `
         fn PrintPostOrder(node: ?*Node) void {
             if (node != null) {
                 PrintPostOrder(node.?.left);
@@ -86,10 +85,10 @@ export default {
             }
         }
       `
-		},
-		{
-			language: "zig",
-			text: `
+        },
+        {
+            language: "zig",
+            text: `
         pub fn main() !void {
             // ******* //
             var arena = std.heap.ArenaAllocator.init(std.heap.page_allocator);
@@ -110,6 +109,6 @@ export default {
             PrintPostOrder(node);
         }
       `
-		}
-	]
+        }
+    ]
 };

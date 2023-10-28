@@ -1,4 +1,4 @@
-import { format_date } from "@helpers/format_date";
+import { format_date, format_tags, collection_keywords } from "@helpers";
 import ListData from "./articles";
 
 export interface Article {
@@ -12,31 +12,27 @@ export interface Article {
   path: string;
 }
 
-const tags: { [key: string]: number } = {};
+let tags_all_formated: { [key: string]: number } = {};
+let keywords: string[] = [];
 const articles: Article[] = [];
 
 for (const iterator of ListData) {
   articles.push({
     title: iterator.title,
     description: iterator.description,
-    tags: iterator.tags,
+    tags: Object.keys(format_tags(iterator.keywords, {})),
     date: format_date(iterator.date),
     path: iterator.path,
   });
-  for (const tag of iterator.tags) {
-    if (tags[tag] === undefined) {
-      tags[tag] = 1;
-    } else {
-      tags[tag]++;
-    }
-  }
+  tags_all_formated = format_tags(iterator.keywords, tags_all_formated);
+  keywords = collection_keywords(iterator.keywords, keywords);
 }
 
 export default {
   title: "CompilertVocado",
   description:
     "Explore the exciting world of programming. Learn languages, practices, and tips to enhance your skills. Find inspiration and resources for your coding journey.",
-  keywords: Object.keys(tags),
-  tags,
+  keywords,
+  tags: tags_all_formated,
   articles,
 };

@@ -8,7 +8,7 @@ export default {
 			"@assets/*": "src/assets/*",
     	"@components/*": "src/components/*",
 			"@data/*": "src/data/*",
-			"@helpers/*": "src/helpers/*",
+			"@helpers": "src/helpers/index.ts",
 			"@layouts/*": "src/layouts/*",
 			"@pages/*": "src/pages/*",
 			"@articles/*": "src/pages/articles/*",

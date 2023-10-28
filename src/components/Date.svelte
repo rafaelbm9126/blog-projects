@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { format_date } from "@helpers/format_date";
+  import { format_date } from "@helpers";
 
   export let date: string;
 
