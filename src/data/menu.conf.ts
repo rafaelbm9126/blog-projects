@@ -7,7 +7,7 @@ export default {
     },
     {
       title: "C++",
-      visible: false,
+      visible: true,
       href: "/?lang=cpp",
     },
     {
@@ -19,6 +19,16 @@ export default {
       title: "Typescript",
       visible: false,
       href: "/?lang=tsc",
+    },
+    {
+      title: "C lang",
+      visible: false,
+      href: "/?lang=clang",
+    },
+    {
+      title: "About",
+      visible: true,
+      href: "/?lang=about",
     },
   ],
 };

@@ -4,6 +4,8 @@
   import "prismjs/plugins/line-numbers/prism-line-numbers";
   import "prismjs/plugins/normalize-whitespace/prism-normalize-whitespace";
   import "prismjs/components/prism-zig";
+  import "prismjs/components/prism-c";
+  import "prismjs/components/prism-cpp";
 
   export let language: string = "javascript";
   export let code: string = "";
@@ -17,7 +19,7 @@
   }
 </script>
 
-<div class="relative group">
+<div class="relative group mb-8">
   <div
     class="absolute top-2 right-2 hidden group-hover:block z-10"
     on:click={copyToClipboard}

@@ -2,7 +2,7 @@ export default {
     title: "Ziglang, another way to create a binary search tree",
     description:
         "This article explores the unique features and advantages of Ziglang in the context of binary search trees",
-    keywords: ["zig", "ziglang", "compiler", "programming", "code", "computing", "execute", "linux", "windows", "mac"],
+    keywords: ["zig", "ziglang", "compiler", "programming", "code", "computing", "execute", "linux", "windows", "mac", "binary", "tree", "search", "struct"],
     date: "2023-10-23",
     api_url: "https://api.github.com/repos/rafaelbm9126/binary-search-tree",
     repo_url: "//github.com/rafaelbm9126/binary-search-tree",

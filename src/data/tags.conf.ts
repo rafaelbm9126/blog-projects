@@ -4,7 +4,7 @@ const data: { [key: string]: any } = {
     reference: "",
   },
   compiler: {
-    visible: true,
+    visible: false,
     reference: "",
   },
   zig: {
@@ -37,6 +37,46 @@ const data: { [key: string]: any } = {
   },
   mac: {
     visible: false,
+    reference: "",
+  },
+  cpp: {
+    visible: true,
+    reference: "",
+  },
+  "c++": {
+    visible: false,
+    reference: "cpp",
+  },
+  c: {
+    visible: true,
+    reference: "",
+  },
+  "clang": {
+    visible: false,
+    reference: "c",
+  },
+  stack: {
+    visible: false,
+    reference: "",
+  },
+  lifo: {
+    visible: false,
+    reference: "",
+  },
+  binary: {
+    visible: false,
+    reference: "",
+  },
+  tree: {
+    visible: false,
+    reference: "",
+  },
+  search: {
+    visible: false,
+    reference: "",
+  },
+  struct: {
+    visible: true,
     reference: "",
   },
 };
