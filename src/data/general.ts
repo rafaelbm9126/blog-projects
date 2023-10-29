@@ -16,7 +16,9 @@ let tags_all_formated: { [key: string]: number } = {};
 let keywords: string[] = [];
 const articles: Article[] = [];
 
-for (const iterator of ListData) {
+for (const iterator of ListData.sort(
+  (a, b) => (a.date < b.date) ? 1 : ((b.date < a.date) ? -1 : 0))
+) {
   articles.push({
     title: iterator.title,
     description: iterator.description,
