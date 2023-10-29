@@ -4,7 +4,7 @@ export default {
         "Learn to implement a compact LIFO (Last In, First Out) stack in C++ with concise code",
     keywords: ["c++", "cpp", "compiler", "programming", "code", "computing", "execute", "linux", "windows", "mac", "stack", "lifo", "struct"],
     date: "2023-10-29",
-    api_url: "https://api.github.com/repos/rafaelbm9126/binary-search-tree",
+    api_url: "https://api.github.com/gists/59e31dd2c2bf5678a8d0534c9cf7c6e9",
     repo_url: "https://gist.github.com/rafaelbm9126/59e31dd2c2bf5678a8d0534c9cf7c6e9",
     path: "cpp-simple-stack-lifo",
     code: [

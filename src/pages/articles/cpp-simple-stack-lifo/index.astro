@@ -8,6 +8,7 @@ import SubTitle from "@components/SubTitle.svelte";
 import List from "@components/List.svelte";
 import Code from "@components/Code.svelte";
 import TagList from "@components/TagList.svelte";
+import GithubButton from "@components/GithubButton.svelte";
 
 import data from "@/data/articles/2";
 ---
@@ -45,6 +46,7 @@ import data from "@/data/articles/2";
 	<Code language={data.code[1].language} code={data.code[1].text} client:only />
 	<SubTitle>Here is where it all begins</SubTitle>
 	<Code language={data.code[2].language} code={data.code[2].text} client:only />
+	<GithubButton url={data.api_url} repo={data.repo_url} client:load />
 </Layout>
 
 <style></style>
