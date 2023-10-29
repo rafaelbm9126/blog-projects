@@ -11,15 +11,22 @@
   <nav
     class="ml-auto mr-auto flex h-full w-full max-w-7xl items-center justify-between p-6 lg:pl-8 lg:pr-8"
   >
-    <div class="flex flex-1">
-      <a href="/" title="Home" class="-m-1.5 p-1.5">
-        <img
-          class="h-12 w-12"
-          src="/logo.svg"
-          alt="Home"
-        />
-      </a>
-    </div>
+    {#if !$openResponsiveMenu}
+      <div class="flex flex-1">
+        <a href="/" title="Home" class="flex items-center -m-1.5 p-1.5">
+          <img
+            class="h-12 w-12"
+            src="/logo.svg"
+            alt="Home"
+          />
+          <span class="font-semibold text-white text-xl italic">
+            CompilertVocado
+          </span>
+        </a>
+      </div>
+    {:else}
+      <div></div>
+    {/if}
     <div class="flex lg:hidden">
       <button
         type="button"
