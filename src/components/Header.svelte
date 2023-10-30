@@ -1,9 +1,16 @@
 <script lang="ts" type="module">
-  import { openResponsiveMenu } from "@store/index";
+  import { openResponsiveMenu, openAbout, showModalStandar } from "@store/index";
   import MenuConfig from "@data/menu.conf";
+  import data from "@data/general";
 
   function updateMenu(show: boolean) {
     openResponsiveMenu.set(show);
+    showModalStandar.set(show);
+  }
+
+  function updateAbout(show: boolean) {
+    openAbout.set(show);
+    showModalStandar.set(show);
   }
 </script>
 
@@ -16,11 +23,11 @@
         <a href="/" title="Home" class="flex items-center -m-1.5 p-1.5">
           <img
             class="h-12 w-12"
-            src="/logo.svg"
+            src={data.logo}
             alt="Home"
           />
           <span class="font-semibold text-white text-xl italic">
-            CompilertVocado
+            {data.title}
           </span>
         </a>
       </div>
@@ -59,6 +66,15 @@
           </a>
         {/if}
       {/each}
+      <span
+        class="text-sm font-semibold leading-5 text-white cursor-pointer"
+        on:click={() => updateAbout(true)}
+        on:keypress={() => null}
+        role="button"
+        tabindex={0}
+      >
+        About
+      </span>
     </div>
   </nav>
 </header>

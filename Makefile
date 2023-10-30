@@ -3,3 +3,6 @@ up:
 
 bash:
 	docker run -it --rm -v ${PWD}:/app -w /app node:latest bash
+
+check:
+	docker run -it --rm -v ${PWD}:/app -w /app node:latest npm run check
