@@ -19,7 +19,7 @@
   }
 </script>
 
-<div class="relative group mb-8">
+<div class="relative group">
   <div
     class="absolute top-2 right-2 hidden group-hover:block z-10"
     on:click={copyToClipboard}

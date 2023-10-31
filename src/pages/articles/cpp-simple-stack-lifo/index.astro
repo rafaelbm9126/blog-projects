@@ -1,52 +1,89 @@
 ---
-import Layout from "@layouts/Layout.astro";
-import Title from "@components/Title.svelte";
-import Date from "@components/Date.svelte";
+import ArticleLayout from "@layouts/ArticleLayout.astro";
+import Section from "@components/Section.svelte";
+import Container from "@/components/Container.svelte";
 import Summary from "@components/Summary.svelte";
 import Paragraph from "@components/Paragraph.svelte";
-import SubTitle from "@components/SubTitle.svelte";
+import SubTitleXL from "@/components/SubTitleXL.svelte";
 import List from "@components/List.svelte";
 import Code from "@components/Code.svelte";
-import TagList from "@components/TagList.svelte";
 import GithubButton from "@components/GithubButton.svelte";
 
-import data from "@/data/articles/2";
+import data from "@data/articles/2";
 ---
 
-<Layout title={data.title} description={data.description} keywords={data.keywords}>
-	<Title>{data.title}</Title>
-	<Date date={data.date} />
-	<TagList tags={data.keywords} />
-	<Summary>
-		"Explore how to create a LIFO (Last In, First Out) stack efficiently in C++ with a clear and
-		concise implementation, all within a minimal codebase of fewer than 50 lines. Discover the
-		fundamental principles and practical coding techniques to manage your data in a stack
-		structure."
-	</Summary>
-	<SubTitle>We will create a struct object</SubTitle>
-	<Paragraph>
-		In C++, '<strong>struct</strong>' is a keyword used to define a data structure, which is a
-		collection of related variables that can have different data types. Structures allow the
-		programmer to logically group data under a single name. Each variable within a structure is
-		called a "member" and can be of any valid data type in C++, including other structure types.
-	</Paragraph>
-	<Code language={data.code[0].language} code={data.code[0].text} client:only />
-	<SubTitle>Creation and stacking function</SubTitle>
-	<Paragraph>
-		This C++ function creates a new node in a linked list and inserts it at the beginning of the
-		list. Here are the key steps:
-	</Paragraph>
-	<List
-		list={[
-			`A new node named new_node is created using the new operator. This node is initialized with the value passed as an argument (value), and its next pointer is set to NULL.`,
-			`It checks if the list passed as an argument (*node) is empty. If the list is empty (pointing to NULL), the new node becomes the first and only node in the list.`,
-			`If the list is not empty, the new node is linked to the previous node (the current first node in the list). The next pointer of the new node points to the current first node, and then the pointer of the list (*node) is updated to point to the new node, making it the new first node in the list.`
-		]}
-	/>
-	<Code language={data.code[1].language} code={data.code[1].text} client:only />
-	<SubTitle>Here is where it all begins</SubTitle>
-	<Code language={data.code[2].language} code={data.code[2].text} client:only />
-	<GithubButton url={data.api_url} repo={data.repo_url} client:load />
-</Layout>
+<ArticleLayout
+	title={data.title}
+	description={data.description}
+	keywords={data.keywords}
+	date={data.date}
+>
+	<Section aria="LIFO explanation">
+		<Container bottom={12}>
+			<Summary>
+				"Explore how to create a LIFO (Last In, First Out) stack efficiently in C++ with a clear and
+				concise implementation, all within a minimal codebase of fewer than 50 lines. Discover the
+				fundamental principles and practical coding techniques to manage your data in a stack
+				structure."
+			</Summary>
+		</Container>
+	</Section>
+
+	<Section aria="Create struct">
+		<Container bottom={6}>
+			<SubTitleXL>We will create a struct object</SubTitleXL>
+		</Container>
+		<Container bottom={6}>
+			<Paragraph>
+				In C++, '<strong>struct</strong>' is a keyword used to define a data structure, which is a
+				collection of related variables that can have different data types. Structures allow the
+				programmer to logically group data under a single name. Each variable within a structure is
+				called a "member" and can be of any valid data type in C++, including other structure types.
+			</Paragraph>
+		</Container>
+		<Container bottom={12}>
+			<Code language={data.code[0].language} code={data.code[0].text} client:only />
+		</Container>
+	</Section>
+
+	<Section aria="Function create node">
+		<Container bottom={6}>
+			<SubTitleXL>Creation and stacking function</SubTitleXL>
+		</Container>
+		<Container bottom={4}>
+			<Paragraph>
+				This C++ function creates a new node in a linked list and inserts it at the beginning of the
+				list. Here are the key steps:
+			</Paragraph>
+		</Container>
+		<Container bottom={6}>
+			<List
+				list={[
+					`A new node named new_node is created using the new operator. This node is initialized with the value passed as an argument (value), and its next pointer is set to NULL.`,
+					`It checks if the list passed as an argument (*node) is empty. If the list is empty (pointing to NULL), the new node becomes the first and only node in the list.`,
+					`If the list is not empty, the new node is linked to the previous node (the current first node in the list). The next pointer of the new node points to the current first node, and then the pointer of the list (*node) is updated to point to the new node, making it the new first node in the list.`
+				]}
+			/>
+		</Container>
+		<Container bottom={12}>
+			<Code language={data.code[1].language} code={data.code[1].text} client:only />
+		</Container>
+	</Section>
+
+	<Section aria="Function main">
+		<Container bottom={6}>
+			<SubTitleXL>Here is where it all begins</SubTitleXL>
+		</Container>
+		<Container bottom={12}>
+			<Code language={data.code[2].language} code={data.code[2].text} client:only />
+		</Container>
+	</Section>
+
+	<Section aria="Github repository">
+		<Container>
+			<GithubButton url={data.api_url} repo={data.repo_url} client:load />
+		</Container>
+	</Section>
+</ArticleLayout>
 
 <style></style>

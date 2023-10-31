@@ -7,7 +7,7 @@
 
 </script>
 
-<div class="mb-6 flex items-center">
+<div class="flex items-center">
   <div class="mr-2">
     <svg
       class="fill-gray-600"

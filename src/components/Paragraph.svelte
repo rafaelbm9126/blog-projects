@@ -1,6 +1,6 @@
 <script lang="ts"></script>
 
-<p class="mb-8 text-white">
+<p class="text-white">
   <slot />
 </p>
 

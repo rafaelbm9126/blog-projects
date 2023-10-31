@@ -2,7 +2,7 @@
   export let list: string[] = [];
 </script>
 
-<ul class="mb-8 list-inside list-disc text-white">
+<ul class="list-inside list-disc text-white">
   {#each list as item, _ (item)}
     <li>
       {item}
