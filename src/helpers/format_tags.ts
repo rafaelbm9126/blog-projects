@@ -1,4 +1,4 @@
-import TagsData from "@data/tags.conf";
+import TagsData from '@data/tags.conf';
 
 export function format_tags(tags: string[], control: { [key: string]: number } = {}) {
 	for (const tag of tags) {

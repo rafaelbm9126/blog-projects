@@ -1,6 +1,6 @@
-<script lang="ts"></script>
+<script lang='ts'></script>
 
-<p class="text-gray-100 italic text-sm">
+<p class='text-gray-100 italic text-sm'>
   <slot />
 </p>
 

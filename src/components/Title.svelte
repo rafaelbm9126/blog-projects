@@ -1,6 +1,6 @@
-<script lang="ts"></script>
+<script lang='ts'></script>
 
-<h1 class="text-3xl text-white font-bold">
+<h1 class='text-3xl text-white font-bold'>
   <slot />
 </h1>
 

@@ -1,22 +1,22 @@
 ---
-import ArticleLayout from "@layouts/ArticleLayout.astro";
-import Section from "@components/Section.svelte";
-import Container from "@components/Container.svelte";
-import ShowImage from "@components/ShowImage.astro";
-import Summary from "@components/Summary.svelte";
-import Note from "@components/Note.svelte";
-import Paragraph from "@components/Paragraph.svelte";
-import SubTitleXL from "@/components/SubTitleXL.svelte";
-import List from "@components/List.svelte";
-import SubTitleXS from "@/components/SubTitleXS.svelte";
-import GithubButton from "@components/GithubButton.svelte";
-import Link from "@components/Link.svelte";
-import Code from "@components/Code.svelte";
+import ArticleLayout from '@layouts/ArticleLayout.astro';
+import Section from '@components/Section.svelte';
+import Container from '@components/Container.svelte';
+import ShowImage from '@components/ShowImage.astro';
+import Summary from '@components/Summary.svelte';
+import Note from '@components/Note.svelte';
+import Paragraph from '@components/Paragraph.svelte';
+import SubTitleXL from '@/components/SubTitleXL.svelte';
+import List from '@components/List.svelte';
+import SubTitleXS from '@/components/SubTitleXS.svelte';
+import GithubButton from '@components/GithubButton.svelte';
+import Link from '@components/Link.svelte';
+import Code from '@components/Code.svelte';
 
-import data from "@data/articles/1";
+import data from '@data/articles/1';
 
-import ZeroImage from "@assets/zero.svg";
-import BstImage from "@assets/bst.png";
+import ZeroImage from '@assets/zero.svg';
+import BstImage from '@assets/bst.png';
 ---
 
 <ArticleLayout
@@ -25,9 +25,9 @@ import BstImage from "@assets/bst.png";
 	keywords={data.keywords}
 	date={data.date}
 >
-	<Section aria="General concept of Ziglang">
+	<Section aria='General concept of Ziglang'>
 		<Container bottom={6}>
-			<ShowImage src={ZeroImage} href="https://github.com/ziglang/logo" />
+			<ShowImage src={ZeroImage} href='https://github.com/ziglang/logo' />
 		</Container>
 		<Container bottom={6}>
 			<Summary>
@@ -39,17 +39,17 @@ import BstImage from "@assets/bst.png";
 		<Container bottom={12}>
 			<Note>
 				Visit for more information
-				<Link href="https://ziglang.org/" arialabel="Ziglang page">ZigLang</Link> Or 
-				<Link href="https://ziglang.org/documentation/master" arialabel="Ziglang documentation page">
+				<Link href='https://ziglang.org/' arialabel='Ziglang page'>ZigLang</Link> Or 
+				<Link href='https://ziglang.org/documentation/master' arialabel='Ziglang documentation page'>
 					ZigLang Doc
 				</Link>
 			</Note>
 		</Container>
 	</Section>
 
-	<Section aria="Definition of binary search tree">
+	<Section aria='Definition of binary search tree'>
 		<Container bottom={6}>
-			<ShowImage src={BstImage} href="https://en.wikipedia.org/wiki/Binary_search_tree" background />
+			<ShowImage src={BstImage} href='https://en.wikipedia.org/wiki/Binary_search_tree' background />
 		</Container>
 		<Container bottom={12}>
 			<Paragraph>
@@ -63,7 +63,7 @@ import BstImage from "@assets/bst.png";
 		</Container>
 	</Section>
 
-	<Section aria="Create struct">
+	<Section aria='Create struct'>
 		<Container bottom={6}>
 			<SubTitleXL>We create a data structure</SubTitleXL>
 		</Container>
@@ -90,7 +90,7 @@ import BstImage from "@assets/bst.png";
 		</Container>
 	</Section>
 
-	<Section aria="Definition allocator">
+	<Section aria='Definition allocator'>
 		<Container bottom={6}>
 			<SubTitleXL>ArenaAllocator?</SubTitleXL>
 		</Container>
@@ -115,7 +115,7 @@ import BstImage from "@assets/bst.png";
 		</Container>
 	</Section>
 
-	<Section aria="Function insert node">
+	<Section aria='Function insert node'>
 		<Container bottom={6}>
 			<SubTitleXL>Insert Node</SubTitleXL>
 		</Container>
@@ -132,12 +132,12 @@ import BstImage from "@assets/bst.png";
 		</Container>
 	</Section>
 
-	<Section aria="Read functions">
+	<Section aria='Read functions'>
 		<Container bottom={6}>
 			<SubTitleXL>Types of traversals</SubTitleXL>
 		</Container>
 
-		<Section aria="Function pre-order">
+		<Section aria='Function pre-order'>
 			<Container bottom={4}>
 				<SubTitleXS>Pre-Order</SubTitleXS>
 			</Container>
@@ -153,7 +153,7 @@ import BstImage from "@assets/bst.png";
 			</Container>
 		</Section>
 
-		<Section aria="Function in-order">
+		<Section aria='Function in-order'>
 			<Container bottom={4}>
 				<SubTitleXS>In-Order</SubTitleXS>
 			</Container>
@@ -169,7 +169,7 @@ import BstImage from "@assets/bst.png";
 			</Container>
 		</Section>
 
-		<Section aria="Function post-order">
+		<Section aria='Function post-order'>
 			<Container bottom={4}>
 				<SubTitleXS>Post-Order</SubTitleXS>
 			</Container>
@@ -186,7 +186,7 @@ import BstImage from "@assets/bst.png";
 		</Section>
 	</Section>
 
-	<Section aria="Function main">
+	<Section aria='Function main'>
 		<Container bottom={6}>
 			<SubTitleXL>Here is where the execution begins</SubTitleXL>
 		</Container>
@@ -195,7 +195,7 @@ import BstImage from "@assets/bst.png";
 		</Container>
 	</Section>
 
-	<Section aria="Note about repository">
+	<Section aria='Note about repository'>
 		<Container bottom={12}>
 			<Note>
 				<strong>Note:</strong>
@@ -205,7 +205,7 @@ import BstImage from "@assets/bst.png";
 		</Container>
 	</Section>
 
-	<Section aria="Github repository">
+	<Section aria='Github repository'>
 		<Container>
 			<GithubButton url={data.api_url} repo={data.repo_url} client:load />
 		</Container>

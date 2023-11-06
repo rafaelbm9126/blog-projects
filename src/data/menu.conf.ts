@@ -1,29 +1,29 @@
 export default {
 	items: [
 		{
-			title: "Ziglang",
+			title: 'Ziglang',
 			visible: true,
-			href: "/?lang=ziglang"
+			href: '/?lang=ziglang'
 		},
 		{
-			title: "C++",
+			title: 'C++',
 			visible: true,
-			href: "/?lang=cpp"
+			href: '/?lang=cpp'
 		},
 		{
-			title: "Rust",
+			title: 'Rust',
 			visible: false,
-			href: "/?lang=rust"
+			href: '/?lang=rust'
 		},
 		{
-			title: "Typescript",
+			title: 'Typescript',
 			visible: false,
-			href: "/?lang=tsc"
+			href: '/?lang=tsc'
 		},
 		{
-			title: "C lang",
+			title: 'C lang',
 			visible: false,
-			href: "/?lang=clang"
+			href: '/?lang=clang'
 		}
 	]
 };

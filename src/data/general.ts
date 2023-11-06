@@ -1,5 +1,5 @@
-import { format_date, format_tags, collection_keywords } from "@helpers";
-import ListData from "./articles";
+import { format_date, format_tags, collection_keywords } from '@helpers';
+import ListData from './articles';
 
 export interface Article {
 	title: string;
@@ -29,13 +29,13 @@ for (const iterator of ListData.sort((a, b) => (a.date < b.date ? 1 : b.date < a
 }
 
 export default {
-	title: "CompilertVocado",
-	logo: "/logo.svg",
+	title: 'CompilertVocado',
+	logo: '/logo.svg',
 	description:
-		"Explore the exciting world of programming. Learn languages, practices, and tips to enhance your skills. Find inspiration and resources for your coding journey.",
+		'Explore the exciting world of programming. Learn languages, practices, and tips to enhance your skills. Find inspiration and resources for your coding journey.',
 	keywords,
 	tags: tags_all_formated,
 	articles,
-	github_url: "https://github.com/rafaelbm9126",
-	linkedin: "",
+	github_url: 'https://github.com/rafaelbm9126',
+	linkedin: '',
 };

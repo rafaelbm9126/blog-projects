@@ -1,4 +1,4 @@
-<script lang="ts">
+<script lang='ts'>
   export let top = 0;
   export let bottom = 0;
 </script>

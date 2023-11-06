@@ -1,83 +1,90 @@
-const data: { [key: string]: any } = {
+type DataTag = {
+	[key: string]: {
+		visible: boolean;
+		reference: string;
+	};
+};
+
+const data: DataTag = {
 	ziglang: {
 		visible: true,
-		reference: ""
+		reference: ''
 	},
 	compiler: {
 		visible: false,
-		reference: ""
+		reference: ''
 	},
 	zig: {
 		visible: false,
-		reference: "ziglang"
+		reference: 'ziglang'
 	},
 	programming: {
 		visible: false,
-		reference: ""
+		reference: ''
 	},
 	code: {
 		visible: false,
-		reference: ""
+		reference: ''
 	},
 	computing: {
 		visible: false,
-		reference: ""
+		reference: ''
 	},
 	execute: {
 		visible: false,
-		reference: ""
+		reference: ''
 	},
 	linux: {
 		visible: false,
-		reference: ""
+		reference: ''
 	},
 	windows: {
 		visible: false,
-		reference: ""
+		reference: ''
 	},
 	mac: {
 		visible: false,
-		reference: ""
+		reference: ''
 	},
 	cpp: {
 		visible: true,
-		reference: ""
+		reference: ''
 	},
-	"c++": {
+	'c++': {
 		visible: false,
-		reference: "cpp"
+		reference: 'cpp'
 	},
 	c: {
 		visible: true,
-		reference: ""
+		reference: ''
 	},
 	clang: {
 		visible: false,
-		reference: "c"
+		reference: 'c'
 	},
 	stack: {
 		visible: false,
-		reference: ""
+		reference: ''
 	},
 	lifo: {
 		visible: false,
-		reference: ""
+		reference: ''
 	},
 	binary: {
 		visible: false,
-		reference: ""
+		reference: ''
 	},
 	tree: {
 		visible: false,
-		reference: ""
+		reference: ''
 	},
 	search: {
 		visible: false,
-		reference: ""
+		reference: ''
 	},
 	struct: {
 		visible: true,
-		reference: ""
+		reference: ''
 	}
 };
 
