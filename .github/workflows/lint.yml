@@ -1,0 +1,16 @@
+name: Lint
+on: [ push ]
+jobs:
+  eslint_check:
+    name: Prepare action
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout 
+      uses: actions/checkout@v1
+    - name: Lint
+      uses: Krizzu/eslint-check-action@v1.1.0
+      with:
+        ghToken: ${{secrets.SECRET_TOKEN}}
+        eslintFiles: "."
+        eslintConfig: ".eslintrc",
+        eslintExt: "astro, js, jsx, md, mdx, svelte, ts, tsx"
