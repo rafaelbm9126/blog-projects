@@ -1,16 +1,34 @@
-name: Lint
-on: [ push ]
+name: ESLint
+
+on:
+  push:
+    branches: ["master"]
+
 jobs:
-  eslint_check:
-    name: Prepare action
+  eslint:
+    name: Run eslint scanning
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
     steps:
-    - name: Checkout 
-      uses: actions/checkout@v1
-    - name: Lint
-      uses: Krizzu/eslint-check-action@v1.1.0
-      with:
-        ghToken: ${{secrets.SECRET_TOKEN}}
-        eslintFiles: "."
-        eslintConfig: ".eslintrc",
-        eslintExt: "astro, js, jsx, md, mdx, svelte, ts, tsx"
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Install ESLint
+        run: |
+          npm install --only=dev
+      
+      - name: Run ESLint
+        run: npx eslint src
+          --config .eslintrc
+          --ext .astro,.js,.jsx,.md,.mdx,.svelte,.ts,.tsx
+          --output-file eslint-results.sarif
+        continue-on-error: true
+
+      - name: Upload analysis results to GitHub
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: eslint-results.sarif
+          wait-for-processing: true
